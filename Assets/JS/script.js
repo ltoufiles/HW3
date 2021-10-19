@@ -1,5 +1,6 @@
-window.addEventListener('click', function() {
-  var plength = prompt("How many characters would you like?");
+var password=document.getElementById("button"); 
+ 
+ var plength = prompt("How many characters would you like?");
 
   while (plength < 6 || plength > 128) {
     plength = prompt("Length must be 6-128 characters");
@@ -22,7 +23,7 @@ window.addEventListener('click', function() {
  //DOM elements
  const resultEl = document.getElementById('password');
 
- document.getElementById('generate').addEventListener('click', () => {
+ document.getElementById('button').addEventListener('click', () => {
   resultEl.value = generatePassword(lowercase, uppercase, numbers, symbols, plength);
 
 
@@ -92,3 +93,5 @@ return rando(9);
 function getRandomSymbol() {
 return rando('!@#$%^&*(){}[]=<>/,.');
 }
+
+ };
